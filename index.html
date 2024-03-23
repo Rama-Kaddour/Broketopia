@@ -10,42 +10,127 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.xyz/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <style>
     .darkened-image {
-        filter: brightness(50%);
-        object-fit: cover !important;
+      filter: brightness(50%);
+      object-fit: cover !important;
     }
     .title{
-        font-family:Georgia;
-        font-weight: 600;
-        font-size: 38px;
-        text-shadow: 0px 5px 2px black;
+      font-family: 'Lobster', cursive !important;
+      font-weight: 600;
+      font-size: 38px;
+      text-shadow: 0px 5px 2px black;
+    }
+    .title2{
+      font-family: 'lobster', cursive !important;
+      font-weight: 600;
     }
     .header-text {
-        position: absolute;
-        top: 20%;
-        left: 1.8%;
-        right: auto;
-        width: 96.66666666666666%;
-        color: #fff;
+      position: absolute;
+      top: 20%;
+      left: 1.8%;
+      right: auto;
+      width: 96.66666666666666%;
+      color: #fff;
     }
     .carousel-item {
-        height: 600px;
+      height: 600px;
     }
     .crsl-btn{
-        color: white !important;
-        font-weight: 600 !important;
+      color: white !important;
+      font-weight: 600 !important;
     }
     .crsl-btn:hover{
-        color: black !important;
-        background-color: rgb(255, 225, 0) !important;
+      color: black !important;
+      background-color: rgb(255, 225, 0) !important;
     }
+
+    /* flip cards */
+    .container{
+      transform-style: preserve-3d;
+    }
+
+     .box{
+      position: relative;
+      width: 300px;
+      height: 320px;
+      transform-style: preserve-3d;
+      perspective: 1000px;
+      cursor: pointer;
+    }
+
+     .box .body{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: 0.9s ease;
+    }
+
+
+
+     .box .body .imgContainer{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+    }
+
+     .box .body .imgContainer img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 89%;
+      object-fit: cover;
+    }
+    .box .body .imgContainer h5{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 11%;
+      object-fit: cover;
+    }
+
+     .box .body .content{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #333;
+      backface-visibility: hidden;
+      transform-style: preserve-3d;
+      transform: rotateY(180deg);
+    }
+
+     .box:hover .body{
+      transform: rotateY(180deg);
+    }
+
+     .box .body .content div{
+      transform-style: preserve-3d;
+      padding: 20px;
+      background: linear-gradient(135deg, #fe0000,#f4ec21);
+      transform: translateZ(100px);
+    }
+
+     .box .body .content div h3{
+      letter-spacing: 1px;
+    }
+    /* end */
+
     @media (max-width: 900px){
-        .darkened-image{
-            height: 900px;
-        }
+      .darkened-image{
+          height: 900px;
+      }
     }
     </style>
 </head>
-<body>
+<body class="bg-body-tertiary">
     <nav class="navbar navbar-expand-lg bg-body-tertiary px-5 py-3 shadow fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand fw-bold" href="#">
@@ -75,9 +160,9 @@
     </nav>
     <div id="carouselExampleCaptions" class="carousel slide">
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button style="height: 6px; width: 6px; border-radius: 50%;" class="active bg-warning" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1"></button>
+          <button style="height: 6px; width: 6px; border-radius: 50%;" class="bg-warning" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button style="height: 6px; width: 6px; border-radius: 50%;" class="bg-warning" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -138,6 +223,120 @@
               </div>
           </div>
         </div>
+    </div>
+    <div class="row mw-100 d-flex align-items-center justify-content-center flex-wrap mt-5">
+      <h2 class="fw-bold ps-5 text-center">
+        Our Projects
+      </h2>
+      <div class="row w-100 d-flex mt-3 px-5">
+        <div class="col-12 col-md-6 col-lg-3 box mx-auto">
+          <div class="body">
+            <div class="imgContainer">
+              <img class="rounded-top-4" src="img/carousel1.jpg" alt="">
+              <h5 class="align-bottom text-center py-1 ps-2 bg-warning title2 rounded-bottom-4">Project Name</h5>
+            </div>
+            <div class="content d-flex flex-column align-items-center justify-content-center">
+              <div class="rounded-4">
+                <h3 class="text-white fw-bold title2 fs-5">Project Name</h3>
+                <p class="fs-6 mt-2 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sed cum neque, rem provident ex. Laboriosam perspiciatis modi eveniet in?</p>
+                <a href="#"><button class="rounded-4 border-white border-4 bg-black text-white px-3 py-1 float-end mt-2">Read More</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 box mx-auto">
+          <div class="body">
+            <div class="imgContainer">
+              <img class="rounded-top-4" src="img/carousel1.jpg" alt="">
+              <h5 class="align-bottom text-center py-1 ps-2 bg-warning title2 rounded-bottom-4">Project Name</h5>
+            </div>
+            <div class="content d-flex flex-column align-items-center justify-content-center">
+              <div class="rounded-4">
+                <h3 class="text-white fw-bold title2 fs-5">Project Name</h3>
+                <p class="fs-6 mt-2 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sed cum neque, rem provident ex. Laboriosam perspiciatis modi eveniet in?</p>
+                <a href="#"><button class="rounded-4 border-white border-4 bg-black text-white px-3 py-1 float-end mt-2">Read More</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 box mx-auto">
+          <div class="body">
+            <div class="imgContainer">
+              <img class="rounded-top-4" src="img/carousel1.jpg" alt="">
+              <h5 class="align-bottom text-center py-1 ps-2 bg-warning title2 rounded-bottom-4">Project Name</h5>
+            </div>
+            <div class="content d-flex flex-column align-items-center justify-content-center">
+              <div class="rounded-4">
+                <h3 class="text-white fw-bold title2 fs-5">Project Name</h3>
+                <p class="fs-6 mt-2 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sed cum neque, rem provident ex. Laboriosam perspiciatis modi eveniet in?</p>
+                <a href="#"><button class="rounded-4 border-white border-4 bg-black text-white px-3 py-1 float-end mt-2">Read More</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 box mx-auto">
+          <div class="body">
+            <div class="imgContainer">
+              <img class="rounded-top-4" src="img/carousel1.jpg" alt="">
+              <h5 class="align-bottom text-center py-1 ps-2 bg-warning title2 rounded-bottom-4">Project Name</h5>
+            </div>
+            <div class="content d-flex flex-column align-items-center justify-content-center">
+              <div class="rounded-4">
+                <h3 class="text-white fw-bold title2 fs-5">Project Name</h3>
+                <p class="fs-6 mt-2 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sed cum neque, rem provident ex. Laboriosam perspiciatis modi eveniet in?</p>
+                <a href="#"><button class="rounded-4 border-white border-4 bg-black text-white px-3 py-1 float-end mt-2">Read More</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row w-100 d-flex mt-3 px-5">
+        <div class="col-12 col-md-6 col-lg-3 box mx-auto">
+          <div class="body">
+            <div class="imgContainer">
+              <img class="rounded-top-4" src="img/carousel1.jpg" alt="">
+              <h5 class="align-bottom text-center py-1 ps-2 bg-warning title2 rounded-bottom-4">Project Name</h5>
+            </div>
+            <div class="content d-flex flex-column align-items-center justify-content-center">
+              <div class="rounded-4">
+                <h3 class="text-white fw-bold title2 fs-5">Project Name</h3>
+                <p class="fs-6 mt-2 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sed cum neque, rem provident ex. Laboriosam perspiciatis modi eveniet in?</p>
+                <a href="#"><button class="rounded-4 border-white border-4 bg-black text-white px-3 py-1 float-end mt-2">Read More</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 box mx-auto">
+          <div class="body">
+            <div class="imgContainer">
+              <img class="rounded-top-4" src="img/carousel1.jpg" alt="">
+              <h5 class="align-bottom text-center py-1 ps-2 bg-warning title2 rounded-bottom-4">Project Name</h5>
+            </div>
+            <div class="content d-flex flex-column align-items-center justify-content-center">
+              <div class="rounded-4">
+                <h3 class="text-white fw-bold title2 fs-5">Project Name</h3>
+                <p class="fs-6 mt-2 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sed cum neque, rem provident ex. Laboriosam perspiciatis modi eveniet in?</p>
+                <a href="#"><button class="rounded-4 border-white border-4 bg-black text-white px-3 py-1 float-end mt-2">Read More</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 box mx-auto">
+          <div class="body">
+            <div class="imgContainer">
+              <img class="rounded-top-4" src="img/carousel1.jpg" alt="">
+              <h5 class="align-bottom text-center py-1 ps-2 bg-warning title2 rounded-bottom-4">Project Name</h5>
+            </div>
+            <div class="content d-flex flex-column align-items-center justify-content-center">
+              <div class="rounded-4">
+                <h3 class="text-white fw-bold title2 fs-5">Project Name</h3>
+                <p class="fs-6 mt-2 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sed cum neque, rem provident ex. Laboriosam perspiciatis modi eveniet in?</p>
+                <a href="#"><button class="rounded-4 border-white border-4 bg-black text-white px-3 py-1 float-end mt-2">Read More</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
 
