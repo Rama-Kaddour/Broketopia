@@ -158,6 +158,57 @@
     }
     /* end */
 
+    /* flip card leadership */
+    .flip {
+      position: relative;
+      .front,
+      .back {
+          transition-duration: 1s;
+          transition-property: transform, opacity;
+      }
+      .back {
+          position: absolute;
+          opacity: 0;
+          top: 0px;
+          left: 0px;
+          width: 350px;
+          height: 100%;
+      }
+      &:hover {
+          .front {
+              transform: rotateY(155deg);
+          }
+          .back {
+              opacity: 1;
+              transform: rotateY(0deg);
+          }
+      }
+    }
+    .flip {
+        position: relative;
+        display: inline-block;
+        margin-right: 2px;
+        margin-bottom: 1em;
+        width: 350px;
+        >.front,
+        >.back {
+          display: block;
+          color: white;
+          width: 350px;
+          background-size: cover!important;
+          background-position: center!important;
+          height: 370px;
+          background: rgb(207, 181, 32);
+          border-radius: 10px;
+        }
+    }
+    .img-card{
+      width: 350px !important;
+      height: 270px !important;
+      object-fit: cover !important;
+    }
+    /* end */
+
     @media (max-width: 900px){
       .darkened-image{
         height: 900px;
@@ -533,6 +584,60 @@
         </div>
       </div>
     </div>
+
+    <hr class="w-75 mx-auto my-5">
+    <div class="row mw-100 d-flex align-items-center justify-content-center flex-wrap">
+      <h2 class="fw-bold text-center">
+        Our Proffesional Leadership
+      </h2>
+      <p class="w-75 py-3 text-center">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus officia nam cupiditate ipsam itaque incidunt debitis. Deleniti perferendis vel aspernatur. Lorem ipsum dolor sit amet.
+      </p>
+    </div>
+
+
+    <div class="container2">
+      <div class="row d-flex justify-content-center">
+        <div class="col-12 col-lg-4 mx-3 flip">
+          <div class="front text-center rounded-4">
+            <img class="img-card rounded-top-4" src="img/shipman-northcutt-sgZX15Da8YE-unsplash.jpg" alt="">
+            <p class="pt-2 fs-5 fw-bold">Mohammed</p>
+            <p class="fs-5 fw-semibold pb-5">CEO</p>
+          </div>
+          <div class="back py-4 px-3 rounded-4">
+             <h2>Mohammed</h2>
+             <p class="pt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. At veritatis recusandae inventore adipisci veniam sit quaerat reiciendis voluptates, autem nisi laudantium fuga cumque excepturi quibusdam voluptatum omnis quidem voluptas optio perspiciatis blanditiis consectetur soluta. A.</p>
+             <a href="#"><button class="rounded-4 border-white border-4 bg-black text-white px-3 py-1 float-end mt-4">Contact Me</button></a>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 mx-3 flip">
+          <div class="front text-center rounded-4">
+            <img class="img-card rounded-top-4" src="img/christina-wocintechchat-com-0Zx1bDv5BNY-unsplash.jpg" alt="">
+            <p class="pt-2 fs-5 fw-bold">Christina</p>
+            <p class="fs-5 fw-semibold pb-5">CEO</p>
+          </div>
+          <div class="back py-4 px-3 rounded-4">
+             <h2>Christina</h2>
+             <p class="pt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. At veritatis recusandae inventore adipisci veniam sit quaerat reiciendis voluptates, autem nisi laudantium fuga cumque excepturi quibusdam voluptatum omnis quidem voluptas optio perspiciatis blanditiis consectetur soluta. A.</p>
+             <a href="#"><button class="rounded-4 border-white border-4 bg-black text-white px-3 py-1 float-end mt-4">Contact Me</button></a>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 mx-3 flip">
+          <div class="front text-center rounded-4">
+            <img class="img-card rounded-top-4" src="img/shipman-northcutt-sgZX15Da8YE-unsplash.jpg" alt="">
+            <p class="pt-2 fs-5 fw-bold">Mohammed</p>
+            <p class="fs-5 fw-semibold pb-5">CEO</p>
+          </div>
+          <div class="back py-4 px-3 rounded-4">
+             <h2>Mohammed</h2>
+             <p class="pt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. At veritatis recusandae inventore adipisci veniam sit quaerat reiciendis voluptates, autem nisi laudantium fuga cumque excepturi quibusdam voluptatum omnis quidem voluptas optio perspiciatis blanditiis consectetur soluta. A.</p>
+             <a href="#"><button class="rounded-4 border-white border-4 bg-black text-white px-3 py-1 float-end mt-4">Contact Me</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
     <hr class="w-75 mx-auto my-5">
     <div class="row mw-100 d-flex align-items-center justify-content-center flex-wrap">
       <h2 class="fw-bold text-center">
@@ -644,7 +749,7 @@
       Designed by <a class="text-black rounded-4 title2" style="text-decoration: none; text-shadow: 0px 2px 2px #2d2a2a;" href="https://github.com/Rama-Kaddour">Rama Kaddour</a>
     </div>
     <!-- Copyright -->
-    </footer>    
+  </footer>    
 
 
 
