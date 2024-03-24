@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Broketopia</title>
+    <link rel="icon" type="image/x-icon" href="img/letter-b.png">
+    <link href="https://cdn.jsdelivr.xyz/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.xyz/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous"/>
+    <style>
+        .title{
+            font-family: 'Lobster', cursive !important;
+            font-weight: 600;
+            font-size: 38px;
+            text-shadow: 0px 5px 2px black;
+        }
+        .title2{
+            font-family: 'lobster', cursive !important;
+            font-weight: 600;
+        }
+        .bg-color{
+            background-color: #073319 !important;
+            color: white !important;
+        }
+        .bg-color-brown{
+            background-color: #ae4c22 !important;
+            color: white !important;
+        }
+        .color-brown{
+            color: #b75227  !important;
+        }
+
+        /* carousel */
+        .slide{
+            width: 1200px !important;
+            object-fit: cover;
+        }
+        .crsl-img{
+            width: 290px;
+            object-fit: cover;
+        }
+        .dot1{
+            position: absolute;
+            top: 40px;
+            margin-left: -70px !important;
+        }
+        .dot2{
+            position: absolute;
+            top: 40px;
+            margin-right: 0px !important ;
+        }
+        .dot3{
+            position: absolute;
+            top: 40px;
+            margin-right: -75px !important;
+        }
+        @media (max-width: 800px) {
+            .slide{
+                width: 500px !important;
+            }
+            .crsl-img{
+                width: 75px;
+                height: 50px;
+            }
+        }
+        @media (min-width: 1000px) {
+            .slide{
+            height: 600px;
+        }
+        /* end */
+        }
+    </style>
+</head>
+<body class="bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary px-2 px-lg-5 py-3 shadow ">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">
+                <img class="me-2" src="img/Logo.png" alt="" style="width: 100px;">
+            </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-center" id="navbarToggler">
+            <ul class="navbar-nav mb-2 mb-lg-0 fw-semibold">
+              <li class="nav-item px-5">
+                <a class="nav-link" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item px-5">
+                <a class="nav-link" href="#">Projects</a>
+              </li>
+              <li class="nav-item px-5">
+                <a class="nav-link" href="#">About us</a>
+              </li>
+              <li class="nav-item px-5">
+                <a class="nav-link" href="#">Services</a>
+              </li>
+              <li class="nav-item px-5">
+                <a class="nav-link" href="#">Contact us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+    <div class="row mw-100 mt-5 ps-3">
+        <div id="carouselExampleIndicators2" class="carousel mw-100">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0" class="bg-color-brown dot1 active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1" class="bg-color-brown dot2" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2" class="bg-color-brown dot3" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner ms-2">
+                <div class="carousel-item active">
+                    <div class="row mw-100 d-flex justify-content-center">
+                        <img src="img/carousel1.jpg" class="slide rounded-5 d-block w-100 ms-3" alt="...">
+                    </div>
+                    <div class="row mw-100 mt-4 d-flex mx-3">
+                        <div class="col-4 d-flex justify-content-end "><img class="crsl-img rounded-4" src="img/carousel1.jpg" alt=""></div>
+                        <div class="col-4 d-flex justify-content-center"><img class="crsl-img rounded-4" src="img/carousel3.jpg" alt=""></div>
+                        <div class="col-4 d-flex justify-content-start"><img class="crsl-img rounded-4" src="img/carousel1.jpg" alt=""></div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row mw-100 d-flex justify-content-center">
+                        <img src="img/carousel1.jpg" class="slide rounded-5 d-block w-100 ms-3" alt="...">
+                    </div>
+                    <div class="row mw-100 mt-4 d-flex mx-3">
+                        <div class="col-4 d-flex justify-content-end "><img class="crsl-img rounded-4" src="img/carousel1.jpg" alt=""></div>
+                        <div class="col-4 d-flex justify-content-center"><img class="crsl-img rounded-4" src="img/carousel3.jpg" alt=""></div>
+                        <div class="col-4 d-flex justify-content-start"><img class="crsl-img rounded-4" src="img/carousel1.jpg" alt=""></div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row mw-100 d-flex justify-content-center">
+                        <img src="img/carousel1.jpg" class="slide rounded-5 d-block w-100 ms-3" alt="...">
+                    </div>
+                    <div class="row mw-100 mt-4 d-flex mx-3">
+                        <div class="col-4 d-flex justify-content-end "><img class="crsl-img rounded-4" src="img/carousel1.jpg" alt=""></div>
+                        <div class="col-4 d-flex justify-content-center"><img class="crsl-img rounded-4" src="img/carousel3.jpg" alt=""></div>
+                        <div class="col-4 d-flex justify-content-start"><img class="crsl-img rounded-4" src="img/carousel1.jpg" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row text d-flex justify-content-center mw-100 mt-5 pt-4">
+        <div class="col-lg-10 col-12 d-flex justify-content-center">
+            <div class="col ms-3">
+                <h2 class="fw-bolder">Mivida</h2>
+            </div>
+            <div class="col">
+                <h4 class="fw-bolder text-end"><i class="bi bi-cash-coin"></i> Start from 53,000,000</h4>
+            </div>
+        </div>
+    </div>
+    <div class="row text d-flex justify-content-center mt-3 ms-lg-0 ms-2">
+        <div class="col-lg-10 col-12 justify-content-center">
+            <p class="lh-lg d-flex">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt repellendus expedita distinctio, temporibus at delectus perspiciatis facere, ducimus accusantium consectetur id. Modi, reiciendis officia. Esse ipsum illo ratione iusto neque odio necessitatibus nostrum eveniet voluptatibus odit? Quasi ad inventore sed maxime, asperiores harum natus sapiente quisquam minima in? Voluptatum voluptatem fuga fugiat enim quam pariatur adipisci numquam suscipit, temporibus dolores ab veniam beatae labore id nemo odit illo magnam dicta porro iure veritatis aliquid hic. Dolorem ab consequuntur obcaecati quas dolorum? Hic animi perspiciatis sapiente cumque incidunt. Molestiae nemo quisquam expedita architecto libero voluptate obcaecati neque nulla sunt facere debitis eveniet quo sit blanditiis, delectus magni impedit quaerat natus, voluptates accusamus enim temporibus pariatur. Est exercitationem, doloribus voluptas asperiores quod excepturi nostrum quisquam! Maxime quas ipsam sit alias ipsum veniam quaerat assumenda asperiores saepe. Provident, quisquam ad ipsa cupiditate autem totam odit exercitationem est, deleniti dolor, ea aspernatur voluptate ab vero. Architecto optio inventore minima deleniti animi numquam facere unde iusto ullam perferendis facilis atque nostrum, consequatur fugiat fuga doloremque ut nam earum perspiciatis exercitationem voluptatibus deserunt expedita. Quae asperiores sed laboriosam placeat neque molestias porro iste enim error amet alias, doloribus ut cumque ipsum consectetur, esse assumenda facilis non?
+            </p>
+        </div>
+        <div class="row mw-100 d-flex justify-content-center">
+            <div class="col-12 col-lg-5 d-flex justify-content-center mt-4">
+                <iframe class="d-flex rounded-4 shadow " src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.3832787751917!2d31.432970224940522!3d29.997149120810942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583cbbdbb83c2d%3A0x4fe036427b47eaf8!2zODUg2KfZhNi02KfYsdi5INin2YTYsdin2KjYudiMINmC2LPZhSDYo9mI2YQg2KfZhNmC2KfZh9ix2Kkg2KfZhNis2K_Zitiv2KnYjCDZhdit2KfZgdi42Kkg2KfZhNmC2KfZh9ix2KnigKwgNDcyMjQxMQ!5e0!3m2!1sar!2seg!4v1711176612157!5m2!1sar!2seg" width="82%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="col-12 col-lg-5 d-flex justify-content-center my-auto card px-5 py-4 rounded-4 border-0 shadow  mt-4">
+                <h3 class="title2 text-center mb-4">Contact Us</h3>
+                <form>
+                    <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="mb-4">
+                        <input type="text" placeholder="Your Name" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="mb-4">
+                        <input type="email" placeholder="Your Email" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="mb-4">
+                        <input type="number" placeholder="Your Phone" class="form-control">
+                        </div>
+                    </div>
+                    </div>
+                    <div class="row">
+                    <div class="mb-3">
+                        <textarea class="form-control" placeholder="Message" id="floatingTextarea2" style="height: 125px"></textarea>
+                    </div>
+                    </div>
+                    <div class="row mt-4 justify-content-center">
+                    <button class="btn send-btn text-black rounded-4 py-2 my-2 px-4 bg-color fw-semibold w-50">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center text-black rounded-top-4 mt-5" style="background-color: lightgray;">
+        <div class="container pt-3 d-block ">
+          <p class="title color-brown" style="font-size: 37px;">Broketopia</p>
+          <p class="w-75 mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore reprehenderit ipsa expedita natus obcaecati quasi similique autem libero sint! Animi dolorum quae assumenda culpa facilis?</p>
+        </div>
+        <div class="container pt-3 pb-0">
+          <section class="mb-4">
+            <a class="btn btn-outline-black bg-light btn-floating rounded-circle hover-bg-gold m-1 border-0 shadow"  href="#" role="button">
+              <i class="bi bi-twitter"></i>
+            </a>
+            <a class="btn btn-outline-black bg-light rounded-circle btn-floating hover-bg-gold m-1 border-0 shadow"  href="https://www.facebook.com/BroketopiaRealEstate1" role="button">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a class="btn btn-outline-black bg-light btn-floating rounded-circle hover-bg-gold m-1 border-0 shadow"  href="#" role="button">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a class="btn btn-outline-black bg-light btn-floating rounded-circle hover-bg-gold m-1 border-0 shadow"  href="#" role="button">
+              <i class="bi bi-skype"></i>
+            </a>
+            <a class="btn btn-outline-black bg-light btn-floating rounded-circle hover-bg-gold m-1 border-0 shadow"  href="#" role="button">
+              <i class="bi bi-linkedin"></i>
+            </a>
+          </section>
+        </div>
+        <div class="text-center pt-3 lh-1">
+          © Copyright Broketopia. All Rights Reserved
+        </div>
+        <div class="text-center p-3 lh-1">
+          Designed by <a class="text-black rounded-4 title2" style="text-decoration: none; text-shadow: 0px 2px 2px #2d2a2a;" href="https://github.com/Rama-Kaddour">Rama Kaddour</a>
+        </div>
+        <!-- Copyright -->
+    </footer>    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>
